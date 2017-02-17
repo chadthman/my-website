@@ -1,22 +1,22 @@
 doctype html
 html
   head
-    title Welcome
+    title Contact
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     link(href='/stylesheets/lib/bootstrap.min.css', rel='stylesheet', media='screen')
     link(href='/stylesheets/style.css', rel='stylesheet', media='screen')
-    link(href='/stylesheets/lib/index.css', rel='stylesheet', media='screen')
+    link(href='/stylesheets/lib/contact.css', rel='stylesheet', media='screen')
 
   body
     div.site-wrapper
-      div.site-wrapper-inner
+      div.site-wrapper-top
         div.cover-container
           div.masthead.clearfix
             div.inner
-              h3.masthead-brand Welcome
+              h3.masthead-brand Contact
               nav
                 ul.nav.masthead-nav
-                  li.active
+                  li
                     a(href="/") Home
                   li
                     a(href="/projects") Projects
@@ -24,15 +24,17 @@ html
                     a(href="/resume") Resume
                   li
                     a(href="https://github.com/chadthman") GitHub
-                  li
+                  li.active
                     a(href="/contact") Contact
-          div.inner.cover
-            img.cover-image(src="/images/me.jpg")
-            h1.cover-heading Hi! I'm Chad
-            p.lead
-              | I am a Software Engineer from Montana. I like to build things.
-              br
-              | This fun website is wrote in Node.js. Please look around!
+          div.inner
+            p.lead Please Leave A Message
+            form(method='POST' action="/contact/addMessage" role="form")
+              textarea.card(name='message' placeholder='Type your message here!')
+              button.btn.btn-large.btn-default Post
+              if messages.length > 0
+                each item in messages
+                  div.card
+                    span #{item.message}
           div.mastfoot
             div.inner
               p

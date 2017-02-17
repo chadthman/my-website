@@ -1,11 +1,11 @@
 doctype html
 html
   head
-    title Welcome
+    title Resume
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     link(href='/stylesheets/lib/bootstrap.min.css', rel='stylesheet', media='screen')
     link(href='/stylesheets/style.css', rel='stylesheet', media='screen')
-    link(href='/stylesheets/lib/index.css', rel='stylesheet', media='screen')
+    link(href='/stylesheets/lib/resume.css', rel='stylesheet', media='screen')
 
   body
     div.site-wrapper
@@ -13,26 +13,21 @@ html
         div.cover-container
           div.masthead.clearfix
             div.inner
-              h3.masthead-brand Welcome
+              h3.masthead-brand Resume
               nav
                 ul.nav.masthead-nav
-                  li.active
+                  li
                     a(href="/") Home
                   li
                     a(href="/projects") Projects
-                  li
+                  li.active
                     a(href="/resume") Resume
                   li
                     a(href="https://github.com/chadthman") GitHub
                   li
                     a(href="/contact") Contact
-          div.inner.cover
-            img.cover-image(src="/images/me.jpg")
-            h1.cover-heading Hi! I'm Chad
-            p.lead
-              | I am a Software Engineer from Montana. I like to build things.
-              br
-              | This fun website is wrote in Node.js. Please look around!
+          div
+            embed(src="/docs/resume.pdf", width="100%", height="950px")
           div.mastfoot
             div.inner
               p

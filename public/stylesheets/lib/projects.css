@@ -1,0 +1,25 @@
+
+/*
+ * Projects
+ */
+
+.card {
+  background-color: #fff;
+  border-radius: 5px;
+  width: 100%;
+  color: #333;
+  text-shadow: none;
+}
+
+.card div {
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.card img {
+  float: left;
+}
+
+/*.card div {*/
+  /*float: left;*/
+/*}*/

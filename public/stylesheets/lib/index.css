@@ -1,0 +1,25 @@
+body {
+  text-align: center;
+}
+
+/*
+ * Images
+ */
+
+img.cover-image {
+  width:300px;
+  height:300px;
+  border-radius:5px;
+}
+
+/*
+ * Cover
+ */
+
+.cover {
+  padding: 0 20px;
+}
+.cover .btn-lg {
+  padding: 10px 20px;
+  font-weight: bold;
+}

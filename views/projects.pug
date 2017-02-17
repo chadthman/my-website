@@ -1,0 +1,63 @@
+doctype html
+html
+  head
+    title Projects
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(href='/stylesheets/lib/bootstrap.min.css', rel='stylesheet', media='screen')
+    link(href='/stylesheets/style.css', rel='stylesheet', media='screen')
+    link(href='/stylesheets/lib/projects.css', rel='stylesheet', media='screen')
+
+  body
+    div.site-wrapper
+      div.site-wrapper-top
+        div.cover-container
+          div.masthead.clearfix
+            div.inner
+              h3.masthead-brand Projects
+              nav
+                ul.nav.masthead-nav
+                  li
+                    a(href="/") Home
+                  li.active
+                    a(href="/projects") Projects
+                  li
+                    a(href="/resume") Resume
+                  li
+                    a(href="https://github.com/chadthman") GitHub
+                  li
+                    a(href="/contact") Contact
+            div.inner
+              a(href="https://github.com/chadthman/Imgup")
+                div.card
+                  //img(src="/imgup.png")
+                  div
+                    h2.cover-heading Imgup
+                    p.lead My fork of this quick image uploading app is the only one that still works in macOS
+              a(href="https://github.com/chadthman/Weather-Wonder")
+                div.card
+                  //img(src="/weather_wonder.png")
+                  div
+                    h2.cover-heading Weather Wonder
+                    p.lead iOS App for predicting weather trends.
+              a(href="https://github.com/chadthman/Stratofall")
+                div.card
+                  //img(src="/stratofall.png")
+                  div
+                    h2.cover-heading Stratofall
+                    p.lead Skydiver distance challenge game for Android.
+              a(href="https://github.com/chadthman/VideoSorter")
+                div.card
+                  div
+                    h2.cover-heading VideoSorter
+                    p.lead Python app for sorting downloaded TV Shows
+          div.mastfoot
+            div.inner
+              p
+                | © 2017&nbsp;
+                a(href="https://twitter.com/chadthman") @chadthman
+
+script(src='/javascripts/lib/jquery-1.11.3.min.js')
+script(src='/javascripts/lib/jquery-ui.min.js')
+script(src='/javascripts/lib/bootstrap.min.js')
+
+

@@ -4,9 +4,10 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
+//var flash = require('connect-flash');
 var index = require('./routes/index');
 var users = require('./routes/users');
+var moment = require('moment');
 
 var app = express();
 
@@ -42,5 +43,13 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+// app.use(flash())
+// app.use(function(req, res, next) {
+//     res.locals.errorMessage = req.flash('error')
+//     res.locals.successMessage = req.flash('success')
+//     //res.locals._csrf = req.csrfToken();
+//     next()
+// });
 
 module.exports = app;
