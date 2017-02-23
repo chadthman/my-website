@@ -28,13 +28,14 @@ html
                     a(href="/contact") Contact
           div.inner
             p.lead Please Leave A Message
-            form(method='POST' action="/contact/addMessage" role="form")
+            form#messageForm
               textarea.card(name='message' placeholder='Type your message here!')
-              button.btn.btn-large.btn-default Post
-              if messages.length > 0
-                each item in messages
-                  div.card
-                    span #{item.message}
+              button#postButton.btn.btn-large.btn-default Post
+              div#messageArea
+                if messages.length > 0
+                  each item in messages
+                    div.card
+                      span #{item.message}
           div.mastfoot
             div.inner
               p
@@ -44,5 +45,6 @@ html
 script(src='/javascripts/lib/jquery-1.11.3.min.js')
 script(src='/javascripts/lib/jquery-ui.min.js')
 script(src='/javascripts/lib/bootstrap.min.js')
+script(src='/javascripts/contact.js')
 
 
