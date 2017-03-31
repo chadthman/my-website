@@ -1,5 +1,7 @@
 var Model = require('../model/models.js')
 var moment = require('moment')
+var encode = require('js-htmlencode')
+
 
 module.exports.show = function (req, res) {
     Model.Message.findAll({
@@ -15,7 +17,7 @@ module.exports.show = function (req, res) {
 
 module.exports.addMessage = function(req, res) {
     var newMessage = {
-        message: req.body.message.substring(0, 500)
+        message: encode.htmlEncode(req.body.message.substring(0, 500))
     }
 
     Model.Message.create(newMessage).then(function() {

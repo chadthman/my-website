@@ -17,6 +17,7 @@
     "serve-favicon": "~2.3.2",
     "sequelize": "~3.17.0",
     "sequelize-cli": "^2.4.0",
-    "sqlite3": "^3.1.4"
+    "sqlite3": "^3.1.4",
+    "js-htmlencode": "~0.3.0"
   }
 }
